@@ -2,38 +2,48 @@ package Podracer;
 
 public class Podracer {
     private String name;
-    private int hastighet;
-    private int integritet;
+    private int speed;
+    private int integrity;
 
-    public Podracer(String name, int hastighet, int integritet) {
+    public Podracer(String name, int speed, int integrity) {
         this.name = name;
-        this.hastighet = hastighet;
-        this.integritet = integritet;
+        this.speed = speed;
+        this.integrity = integrity;
     }
 
-    public int getIntegritet() {
-        return integritet;
+    public String getName() {
+        return name;
     }
 
-    public void setName (String name) {
-        this.name = name;
+    public int getIntegrity() {
+        return integrity;
     }
 
-    public int getHastighet() {
-        return hastighet;
+    public int getSpeed() {
+        return speed;
     }
 // borde heta take damage istället! och där kanske ta in random in?
-    public void setSpeed(int hastighet) {
-        this.hastighet = hastighet;
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
-    //Borde vara metoden take damage, och ta in random in?
+    // TODO: Borde vara metoden take damage, och ta in random in?
+    // typ public void takeDamage (int damage){
+    //integrity -= damage; }
+    public void takeDamage(int amount) {
+        integrity -= amount;
+    }
+
     public void setIntegritet(int integritet) {
-        this.integritet = integritet;
+        this.integrity = integritet;
     }
 
     //Vad ska jag använda denna till? Jag använder den redan!
-    public boolean integrityAboveZero (int integritet){
-        return integritet > 0;
+    public boolean integrityAboveZero (int integrity){
+        return integrity > 0;
+    }
+
+    public void status (){
+        System.out.println(getName() + " har " + getIntegrity() + "/100 HP och kör " + getSpeed() + " km/h!");
     }
 }

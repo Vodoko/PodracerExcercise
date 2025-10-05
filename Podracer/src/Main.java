@@ -13,13 +13,15 @@ public class Main {
 
         System.out.println("Racet kör igång!");
 
-        while (podracer1.integrityAboveZero(podracer1.getIntegritet()) && podracer2.integrityAboveZero(podracer2.getIntegritet())) {
+        while (podracer1.integrityAboveZero(podracer1.getIntegrity()) && podracer2.integrityAboveZero(podracer2.getIntegrity())) {
             // kodblock som körs så länge condition är sann
-            podracer1.setSpeed(podracer1.getHastighet() + randomInt.randomInt());
-            podracer2.setSpeed(podracer2.getHastighet() + randomInt.randomInt());
-            podracer1.setIntegritet(podracer1.getIntegritet() - randomInt.randomInt());
-            podracer2.setIntegritet(podracer2.getIntegritet() - randomInt.randomInt());
-            System.out.println("Anakin har: " + podracer1.getIntegritet() + " och sebulba har: " + podracer2.getIntegritet());
+            podracer1.takeDamage(randomInt.randomInt());
+            podracer2.takeDamage(randomInt.randomInt());
+
+
+            podracer1.setIntegritet(podracer1.getIntegrity() - randomInt.randomInt());
+            podracer2.setIntegritet(podracer2.getIntegrity() - randomInt.randomInt());
+            System.out.println("Anakin har: " + podracer1.getIntegrity() + " och sebulba har: " + podracer2.getIntegrity());
         }
     }
 }
