@@ -2,4 +2,5 @@
 Plan:  
 Steg:  
 
-Att fixa! Randomizer metod!
+Att fixa!
+Borde fixat en Statusmetod i podracer! För att slippa använda sout i main

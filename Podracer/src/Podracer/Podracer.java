@@ -22,11 +22,12 @@ public class Podracer {
     public int getHastighet() {
         return hastighet;
     }
-
+// borde heta take damage istället! och där kanske ta in random in?
     public void setSpeed(int hastighet) {
         this.hastighet = hastighet;
     }
 
+    //Borde vara metoden take damage, och ta in random in?
     public void setIntegritet(int integritet) {
         this.integritet = integritet;
     }
